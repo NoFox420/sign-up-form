@@ -45,6 +45,10 @@ body {
   margin: 10px 0;
 }
 
+#left-side a {
+  color: white;
+}
+
 #main-title {
   font-family: "Norse Bold", sans-serif, serif;
   background-color: hsl(126, 100%, 0%, 0.5);
@@ -83,7 +87,6 @@ body {
 #top {
   background-color: var(--sectionBackground);
   box-shadow: inset gray 0px 0px 4px;
-
   height: 35%;
   width: 100%;
   font-weight: bold;
@@ -137,11 +140,24 @@ fieldset {
   margin-bottom: 10px;
   width: 450px;
 }
-.input-content input {
+
+.input:invalid {
+  border: 2px solid red;
+}
+
+.input:focus {
+  border-color: blue;
+  box-shadow: inset gray 0px 0px 4px;
+}
+
+.input {
   margin-right: 175px;
   height: 25px;
-  border: 2px solid var(--inputBorder);
   border-radius: 5px;
+  padding-left: 5px;
+  border: 2px solid var(--inputBorder);
+  outline: none;
+  font-family: "roboto slab", sans-serif, serif;
 }
 
 /* BOTTOM SECTION */
@@ -156,7 +172,13 @@ fieldset {
   background-color: var(--createAccountButton);
   color: white;
   font-family: "roboto slab", sans-serif, serif;
+  font-weight: bold;
   padding: 10px 40px;
   border-radius: 5px;
   margin-bottom: 25px;
+}
+
+#bottom a {
+  color: var(--createAccountButton);
+  font-weight: bold;
 }
